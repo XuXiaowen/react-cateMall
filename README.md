@@ -33,8 +33,10 @@ $ yarn add swipe-js-iso react-swipe
 ## scripts
 package.json + 
 ```
-"start","webpack-dev-server --port 5000 --open --progress --colors",
-"build","webpack -p"
+"scripts":{
+    "start","webpack-dev-server --port 5000 --open --progress --colors",
+    "build","webpack -p"
+}
 ```
 
 ## 目录结构
