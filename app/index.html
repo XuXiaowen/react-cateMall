@@ -5,6 +5,20 @@
   <title>Title</title>
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_500678_evl1hewrz0ssjor.css">
+
+  <script>
+    ~function () {
+      let calc = function () {
+        let docElement = document.documentElement;
+        let clientW = docElement.clientWidth > 640 ? 640 : docElement.clientWidth;
+        docElement.style.fontSize = clientW / 640 * 100 + 'px';
+      }
+      calc();
+      window.addEventListener('resize', calc);
+    }()
+
+  </script>
 </head>
 <body>
 <div id="root"></div>
