@@ -47,7 +47,8 @@ package.json +
         - index.js
 - index.js 用来控制显示哪一个页面
 
-- store onlyOne
+  //redux
+- store 只有一个 
 - actions 用户发布动作
 - reducers 定义规则的
 - action-types action的名字
