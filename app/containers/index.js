@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {
   HashRouter as Router, //提供一个路由容器
-  Route //单条路由
+  Route, //单条路由
+  Switch //只匹配一次
 } from 'react-router-dom';
 
 import {connect} from 'react-redux';
@@ -9,6 +10,7 @@ import {bindActionCreators} from 'redux';//绑定actionCreators组成的对象
 import * as Actions from '../store/actions/userInfos';//获取所有actionCreator组成的对象
 import {getStorage} from '../local/local';
 import Home from '../containers/Home/home';
+import Detail from '../containers/Detail/Detail';
 class App extends Component {
   constructor() {
     super();
@@ -40,9 +42,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <Route path="/" component={Home}/>
-        </div>
+        <Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path="/detail/:id" component={Detail}/>
+        </Switch>
       </Router>
     )
   }
