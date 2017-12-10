@@ -45,6 +45,24 @@ module.exports = {
             distance: '160m',
             number: '1426',
             id: Math.random().toString().slice(2)
+        },
+        {
+            img: 'https://avatars3.githubusercontent.com/u/22662432?s=460&v=4',
+            title: '北京果木烤鸭',
+            subTitle: '好吃到可好吃了',
+            price: '180',
+            distance: '160m',
+            number: '1426',
+            id: Math.random().toString().slice(2)
+        },
+        {
+            img: 'https://avatars3.githubusercontent.com/u/22662432?s=460&v=4',
+            title: '果蔬超市',
+            subTitle: '你想要买啥',
+            price: '30',
+            distance: '160m',
+            number: '1426',
+            id: Math.random().toString().slice(2)
         }
     ]
 }
