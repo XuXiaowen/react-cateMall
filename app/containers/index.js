@@ -7,13 +7,13 @@ import {
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';//绑定actionCreators组成的对象
 import * as Actions from '../store/actions/userInfos';//获取所有actionCreator组成的对象
-
+import {getStorage} from '../local/local';
 import Home from '../containers/Home/home';
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      isLoaded: false//定义初始加载状态，未加载
+      isLoading: false//定义初始加载状态，未加载
     }
   }
 
@@ -22,8 +22,17 @@ class App extends Component {
     //1、第一次前没有cityName，赋予一个默认值 杭州
     //2、将当前的城市存放到redux里//因为所有的页面都要用到
 
+    let cityName = getStorage('cityName');
+    if (cityName == null) {
+      cityName = '杭州'
+    }
+    //当页面加载后设置一个城市//需要在home页面把城市取出来
+    this.props.userActions.update({
+      cityName
+    });
+
     this.setState({
-      isLoaded: true
+      isLoading: true
     })
     //console.log(this.props.userActions);
   }

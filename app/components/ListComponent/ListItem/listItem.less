@@ -1,0 +1,40 @@
+.list-item {
+  display: flex;
+  padding: .15rem .3rem;
+  border-bottom: 1px solid #ccc;
+  .img {
+    width: 40%;
+    img{
+
+      display: flex;
+      flex: 1;
+      width: 100%;
+    }
+  }
+  strong{
+    color: #e7434c;
+    font-size: .30rem;
+  }
+  .item-info {
+    position: relative;
+    margin-left:.2rem;
+    margin-top:.2rem;
+    flex: 1;
+    div{
+      display:flex;
+      justify-content: space-between;
+    }
+    .dis{
+      position: absolute;
+      right: 0;
+      top:0;
+    }
+    .subT{
+      margin: .1rem 0;
+      width: 3.2rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
